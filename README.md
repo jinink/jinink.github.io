@@ -1,5 +1,5 @@
 ## Personal Academic Website
-### [jinink.github.io](jinink.github.io)
+### [jinink.github.io](http://jinink.github.io)
 #### Name: Tong Jin
 #### Institute: New York University
 ##### Level: Graduate
