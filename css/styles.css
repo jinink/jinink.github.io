@@ -43,6 +43,9 @@ a {
 a:hover {
 	color: rgb(179, 179, 255);
 }
+ul {
+    list-style-type:none
+}
 pre {
 	font-size: 1.4em;
 	color: white;
