@@ -38,7 +38,7 @@ p {
 }
 a {
 	color: rgb(77, 77, 255);
-    	margin-left: -2.5em;
+    	margin-left: 0em;
 }
 a:hover {
 	color: rgb(179, 179, 255);
