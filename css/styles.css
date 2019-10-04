@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgb(64, 64, 64);
 }
 body {
-	font-family: Trebuchet MS, Arial, sans-serif;
+	font-family: 'Source Code Pro','Roboto Mono', monospace;
 	font-size: 100%;
 	width: 80%;
 	margin-right: auto;
