@@ -8,7 +8,19 @@ My major is [Applied Statistics for Social Science Research](https://steinhardt.
 
 This is my first built-from-srcatch **web development project**. 
 
-I frequently post my learning notes and homework solutions. 
+Languages that I am using:
+
+* [HTML5](https://www.w3.org/html/)
+
+* [CSS](https://www.w3.org/Style/CSS/)
+
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+Editor: 
+
+* [Atom](https://atom.io)
+
+I also post my learning notes, programming projects and interesting articles on it. 
 
 Please feel free to [email me](tj1061@nyu.edu) if you have any questions. 
 
