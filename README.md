@@ -22,7 +22,7 @@ Editor:
 
 I also post my learning notes, programming projects and interesting articles on it. 
 
-Please feel free to [email me](tj1061@nyu.edu) if you have any questions. 
+Please leave comments or report issues [HERE](https://github.com/jinink/jinink.github.io/issues/new).
 
 ## Getting started
 
@@ -31,7 +31,7 @@ To visit:
 
 ## Authors
 
-* **Tong Jin** - *Initial work* - [jinink](https://github.com/jinink)
+**Tong Jin** - *Initial work* - GitHub: [jinink](https://github.com/jinink)
 
 ## License
 
@@ -41,7 +41,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 This website is an open source project licensed under the MIT License. 
 
-However, its content is copyright of [Tong Jin] - © [jinink.github.io] [2019]. All rights reserved.
+However, its content is copyright of **Tong Jin - © jinink.github.io, 2019**. All rights reserved.
 
 Any redistribution or reproduction of part or all of the contents in any form is prohibited other than the following:
 
@@ -53,4 +53,10 @@ You may not distribute or commercially exploit the content. Nor may you transmit
 
 ## Academic Integrity 
 
+Please refer to the following page for university-wide academic integrity policies of New York University. 
+
 [Academic Integrity for Students at NYU](https://www.nyu.edu/about/policies-guidelines-compliance/policies-and-guidelines/academic-integrity-for-students-at-nyu.html)
+
+Please refer to the following page for NYU Steinhardt Statement on Academic Integrity.
+
+[Steinhardt Statement on Academic Integrity](https://steinhardt.nyu.edu/statement-academic-integrity)
