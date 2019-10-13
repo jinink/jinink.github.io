@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: rgb(64, 64, 64);
 }
 body {
-	font-family: 'Source Code Pro','Roboto Mono', monospace;
+	font-family: 'Helvetica','Roboto', sans-serif;
 	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
@@ -19,18 +19,18 @@ body {
 	line-height: 1.8;
 }
 h1 {
-	font: 1.8em 'Source Code Pro','Roboto Mono', monospace;
+	font: 2em 'Source Code Pro','Roboto Mono', monospace;
 	margin-top: 1em;
-	margin-bottom: .5em;
+	margin-bottom: 1.5em;
 }
 h2 {
-	font: 1.2em 'Source Code Pro','Roboto Mono', monospace;
+	font: 1.5em 'Roboto','Helvetica', sans-serif;
 	margin-top: 1em;
   margin-bottom: 1em;
 	color: rgb(38, 38, 38);
 }
 h3 {
-	font: 1.0em 'Source Code Pro','Roboto Mono', monospace;
+	font: 1.2em 'Roboto','Helvetica',sans-serif;
 	margin-bottom: .3em;
 }
 p {
@@ -184,6 +184,11 @@ aside.languages {
 }
 #content-wrap {
   padding-bottom: 3rem;    /* Footer height */
+	padding-top: 3em;
+}
+#mainTitle {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 #tabContainer h4 {
 	color: rgb(83, 104, 138);
