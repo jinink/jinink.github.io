@@ -1713,8 +1713,8 @@ summary(lm2)</code></pre>
 <h5>Answer:</h5>
 <pre class="r"><code>mHeight &lt;- mean(toy3$Height)
 toy3$height0 &lt;- toy3$Height - mHeight
-round(mean(toy3$height0), digits = 2)</code></pre>
-<pre><code>## [1] 0</code></pre>
+paste(round(mean(toy3$height0), digits = 2), &quot;.00&quot;)</code></pre>
+<pre><code>## [1] &quot;0 .00&quot;</code></pre>
 </div>
 </div>
 <div id="question-3-of-13" class="section level3">
@@ -1798,7 +1798,8 @@ summary(lm3)</code></pre>
 <p>Based on the model with height0 interacted with gender: what is the expected difference in weights for two groups of males whose heights differ by one inch? (round to 2 decimals)</p>
 <div id="answer-5" class="section level5">
 <h5>Answer:</h5>
-<p><strong>1.14</strong></p>
+<pre class="r"><code>round(summary(lm3)$coef[2] + summary(lm3)$coef[4], digits = 2)</code></pre>
+<pre><code>## [1] 2.02</code></pre>
 </div>
 </div>
 <div id="question-8-of-13" class="section level3">
@@ -1935,7 +1936,8 @@ summary(lm4)</code></pre>
 <p>Based on the regression you just ran: on average, Black babies are expected to weigh _______ grams less than Hispanic babies.</p>
 <div id="answer-9" class="section level5">
 <h5>Answer:</h5>
-<p><strong>42.32</strong></p>
+<pre class="r"><code>round(abs(summary(lm4)$coef[3]), digits = 2)</code></pre>
+<pre><code>## [1] 42.32</code></pre>
 </div>
 </div>
 <div id="question-12-of-13" class="section level3">
