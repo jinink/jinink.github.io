@@ -1742,7 +1742,7 @@ summary {
 <div id="part-2" class="section level3">
 <h3>Part 2</h3>
 <div id="in-this-part-you-will-conduct-a-multiple-regression-analysis-using-the-data-set-toy_example2.csv." class="section level4">
-<h4>In this part, you will conduct a multiple regression analysis using the data set <code>toy_example2.csv</code>.</h4>
+<h4>In this part, you will conduct a multiple regression analysis using the data set <code><a href="toy_example2.csv">toy_example2.csv</a></code>.</h4>
 </div>
 </div>
 <div id="question-10-of-16" class="section level3">
@@ -1767,25 +1767,25 @@ mean_female</code></pre>
 <h5>Answer:</h5>
 <pre class="r"><code>lm1 &lt;- lm(Weight ~ Height + female + Birth.Order, data = toy)
 summary(lm1)</code></pre>
-<pre><code>## 
+<pre><code>##
 ## Call:
 ## lm(formula = Weight ~ Height + female + Birth.Order, data = toy)
-## 
+##
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -61.920 -12.596   0.319  12.131  56.480 
-## 
+##     Min      1Q  Median      3Q     Max
+## -61.920 -12.596   0.319  12.131  56.480
+##
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
+##             Estimate Std. Error t value Pr(&gt;|t|)
 ## (Intercept)  54.9504    14.7931   3.715 0.000227 ***
 ## Height        1.7072     0.2091   8.165 2.68e-15 ***
 ## female      -42.9193     1.8964 -22.632  &lt; 2e-16 ***
-## Birth.Order   0.4149     0.9571   0.434 0.664817    
+## Birth.Order   0.4149     0.9571   0.434 0.664817
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
+##
 ## Residual standard error: 19.22 on 496 degrees of freedom
-## Multiple R-squared:  0.6428, Adjusted R-squared:  0.6406 
+## Multiple R-squared:  0.6428, Adjusted R-squared:  0.6406
 ## F-statistic: 297.5 on 3 and 496 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Height and Female are significant.</p>
 </div>
@@ -1831,25 +1831,25 @@ lm1_intercept + 65 * lm1_Height + 1 * lm1_female + 1 * lm1_birthOrder</code></pr
 <pre class="r"><code>toy$male &lt;- ifelse(toy$Gender == &quot;M&quot;, 1, 0)
 lm1 &lt;- lm(Weight ~ Height + male + Birth.Order, data = toy)
 summary(lm1)</code></pre>
-<pre><code>## 
+<pre><code>##
 ## Call:
 ## lm(formula = Weight ~ Height + male + Birth.Order, data = toy)
-## 
+##
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -61.920 -12.596   0.319  12.131  56.480 
-## 
+##     Min      1Q  Median      3Q     Max
+## -61.920 -12.596   0.319  12.131  56.480
+##
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  12.0311    14.0142   0.858    0.391    
+##             Estimate Std. Error t value Pr(&gt;|t|)
+## (Intercept)  12.0311    14.0142   0.858    0.391
 ## Height        1.7072     0.2091   8.165 2.68e-15 ***
 ## male         42.9193     1.8964  22.632  &lt; 2e-16 ***
-## Birth.Order   0.4149     0.9571   0.434    0.665    
+## Birth.Order   0.4149     0.9571   0.434    0.665
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
+##
 ## Residual standard error: 19.22 on 496 degrees of freedom
-## Multiple R-squared:  0.6428, Adjusted R-squared:  0.6406 
+## Multiple R-squared:  0.6428, Adjusted R-squared:  0.6406
 ## F-statistic: 297.5 on 3 and 496 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Intercept and coefficient on male/female</p>
 </div>
