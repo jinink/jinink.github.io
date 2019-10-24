@@ -1883,12 +1883,29 @@ summary(lm3)</code></pre>
 ## Residual standard error: 19.82 on 255 degrees of freedom
 ## Multiple R-squared:  0.03029,    Adjusted R-squared:  0.02649 
 ## F-statistic: 7.966 on 1 and 255 DF,  p-value: 0.005142</code></pre>
+<pre class="r"><code>anova(lm3)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Df"],"name":[1],"type":["int"],"align":["right"]},{"label":["Sum Sq"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mean Sq"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["F value"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Pr(>F)"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"36780.334","3":"36780.3342","4":"90.721362","5":"7.295274e-20","_rn_":"height0"},{"1":"1","2":"9236.773","3":"9236.7730","4":"22.783171","5":"2.389798e-06","_rn_":"Gender"},{"1":"1","2":"2506.918","3":"2506.9178","4":"6.183495","5":"1.322259e-02","_rn_":"height0:Gender"},{"1":"496","2":"201088.754","3":"405.4209","4":"NA","5":"NA","_rn_":"Residuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<pre class="r"><code>anova(lm_m)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Df"],"name":[1],"type":["int"],"align":["right"]},{"label":["Sum Sq"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mean Sq"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["F value"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Pr(>F)"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"14945.1","3":"14945.0950","4":"35.68316","5":"8.280203e-09","_rn_":"height0"},{"1":"241","2":"100937.5","3":"418.8277","4":"NA","5":"NA","_rn_":"Residuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<pre class="r"><code>anova(lm_f)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Df"],"name":[1],"type":["int"],"align":["right"]},{"label":["Sum Sq"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mean Sq"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["F value"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Pr(>F)"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"3128.712","3":"3128.7117","4":"7.966163","5":"0.00514163","_rn_":"height0"},{"1":"255","2":"100151.287","3":"392.7501","4":"NA","5":"NA","_rn_":"Residuals"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <p><strong>The following arguments are true:</strong></p>
-<p>The intercept and slope of the female regression line between weight and height(centered) are the same between two approaches.</p>
-<p>The model sum of squares of the interaction model equals to the model sum of squares of the female model plus the model sum of squares of the male model.</p>
-<p>The model degrees of freedom of the interaction model equals to the model degrees of freedom of male model plus the female model.</p>
-<p>The residual degrees of freedom of the interaction model equals to the residual degrees of freedom of male model plus the female model.</p>
-<p>One difference between the two approaches is that we now have smaller number of observations in each of the two gender specific models than in the one combined model.</p>
+<p>B. The intercept and slope of the female regression line between weight and height(centered) are the same between two approaches.</p>
+<p>F. The residual degrees of freedom of the interaction model equals to the residual degrees of freedom of male model plus the female model.</p>
+<p>G. One difference between the two approaches is that in the interaction model we only estimate one model variance, while in the gender stratified approach, we estimate two model variances.</p>
+<p>H. One difference between the two approaches is that we now have smaller number of observations in each of the two gender specific models than in the one combined model.</p>
 </div>
 </div>
 <div id="part-2" class="section level3">
