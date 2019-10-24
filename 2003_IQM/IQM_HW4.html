@@ -1656,8 +1656,10 @@ toy3$male &lt;- as.numeric(toy3$Gender == &quot;M&quot;)</code></pre>
 <li><p>The effect of height on weight is the same for male and for female.</p></li>
 <li><p>The gender difference in weight is the same for any height.</p></li>
 <li><p>The effect of height on weight is more pronounced among males than among females, i.e. greater positive slope among males.</p></li>
-<li><p>The gender difference in weight is wider among taller people. ##### Answer:</p></li>
+<li><p>The gender difference in weight is wider among taller people.</p></li>
 </ol>
+<div id="answer" class="section level5">
+<h5>Answer:</h5>
 <pre class="r"><code>lm1 &lt;- lm(Weight ~ Height + Gender, data = toy3)
 summary(lm1)</code></pre>
 <pre><code>## 
@@ -1706,10 +1708,11 @@ summary(lm2)</code></pre>
 <p><strong>3. Interactive Model</strong></p>
 <p><strong>4. Interactive Model</strong></p>
 </div>
+</div>
 <div id="question-2-of-13" class="section level3">
 <h3>Question 2 of 13</h3>
 <p>In order to answer the following questions, you will need to create a new variable with “centralized” height. The mean height in this data set is 67.6inches, generate a new variable called “height0” using the code below (assumes you’ve named the dataset “dat”). Round to two decimal places and do not use scientific notation: <span class="math inline">\(dat\)</span>height0 &lt;- dat<span class="math inline">\(Height - mean(dat\)</span>Height)$</p>
-<div id="answer" class="section level5">
+<div id="answer-1" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>mHeight &lt;- mean(toy3$Height)
 toy3$height0 &lt;- toy3$Height - mHeight
@@ -1720,7 +1723,7 @@ paste(round(mean(toy3$height0), digits = 2), &quot;.00&quot;)</code></pre>
 <div id="question-3-of-13" class="section level3">
 <h3>Question 3 of 13</h3>
 <p>Run a new regression of weight (DV) regressed on an interaction between height0 and gender (IVs), namely: <span class="math inline">\(weight=height0+gender+height0*gender\)</span>. Compare this model to the one with the original height variable interacted with gender (<span class="math inline">\(weight=height+gender+height*gender\)</span>). Which of the following coefficients are different in these two models (check all that apply)?</p>
-<div id="answer-1" class="section level5">
+<div id="answer-2" class="section level5">
 <h5>Answer:</h5>
 <p><strong>Intercept</strong></p>
 <p><strong>Coefficient on gender (may come up as GenderM in code output)</strong></p>
@@ -1772,23 +1775,23 @@ summary(lm3)</code></pre>
 <div id="question-4-of-13" class="section level3">
 <h3>Question 4 of 13</h3>
 <p>For the regression of weight as a function of height0 interacted with gender: Which of the following is a correct interpretation of the intercept?</p>
-<div id="answer-2" class="section level5">
+<div id="answer-3" class="section level5">
 <h5>Answer:</h5>
-<p><strong>Expected average weight of males who are average height.</strong></p>
+<p><strong>Expected average weight of females who are average height.</strong></p>
 </div>
 </div>
 <div id="question-5-of-13" class="section level3">
 <h3>Question 5 of 13</h3>
 <p>For the regression of weight as a function of height0 interacted with gender: Which of the following is a correct interpretation of the slope coefficient on height0?</p>
-<div id="answer-3" class="section level5">
+<div id="answer-4" class="section level5">
 <h5>Answer:</h5>
-<p><strong>Average difference in weight for males whose heights differ by the average height in the dataset.</strong></p>
+<p><strong>Average difference in weight for females whose heights differ by one inch.</strong></p>
 </div>
 </div>
 <div id="question-6-of-13" class="section level3">
 <h3>Question 6 of 13</h3>
 <p>For the regression of weight as a function of height0 interacted with gender: Which of the following is a correct interpretation of the coefficient on gender (probably represented as GenderM in your code output)?</p>
-<div id="answer-4" class="section level5">
+<div id="answer-5" class="section level5">
 <h5>Answer:</h5>
 <p><strong>Difference in average weight of males and females who are average height.</strong></p>
 </div>
@@ -1796,7 +1799,7 @@ summary(lm3)</code></pre>
 <div id="question-7-of-13" class="section level3">
 <h3>Question 7 of 13</h3>
 <p>Based on the model with height0 interacted with gender: what is the expected difference in weights for two groups of males whose heights differ by one inch? (round to 2 decimals)</p>
-<div id="answer-5" class="section level5">
+<div id="answer-6" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>round(summary(lm3)$coef[2] + summary(lm3)$coef[4], digits = 2)</code></pre>
 <pre><code>## [1] 2.02</code></pre>
@@ -1805,7 +1808,7 @@ summary(lm3)</code></pre>
 <div id="question-8-of-13" class="section level3">
 <h3>Question 8 of 13</h3>
 <p>When replacing height with height0 in these models, the R squares of the models are not affected.</p>
-<div id="answer-6" class="section level5">
+<div id="answer-7" class="section level5">
 <h5>Answer:</h5>
 <p><strong>True</strong></p>
 </div>
@@ -1813,7 +1816,7 @@ summary(lm3)</code></pre>
 <div id="question-9-of-13" class="section level3">
 <h3>Question 9 of 13</h3>
 <p>Run two separate regression models, weight on centered height, one for male and one for female (in other words, create two separate datasets, one with just the females and the other with just the males, then run the regression model Weight~height0 for each dataset separately). This approach is also called to stratify the sample based on gender. Examine the results of these two gender specific models, and compare the results with the model you ran in previous questions (<span class="math inline">\(Weight~height0+gender+height0*gender\)</span>). Choose all the answers that are correct. R hint: <code>lm(weight~height0, data=data[data$Gender==&quot;Male&quot;,]) lm(weight~height0, data=data[data$Gender==&quot;Female&quot;,])</code> stata hint: <code>reg weight height0 if Gender==&quot;Male&quot; reg weight height0 if Gender==&quot;Female&quot;</code>.</p>
-<div id="answer-7" class="section level5">
+<div id="answer-8" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>toy3_m &lt;- subset(toy3, toy3$Gender == &quot;M&quot;)
 toy3_f &lt;- subset(toy3, toy3$Gender == &quot;F&quot;)
@@ -1898,7 +1901,7 @@ summary(lm3)</code></pre>
 <h3>Question 10 of 13</h3>
 <p>Fit a regression of birth weight on race using Hispanic as reference group, and match the regression coefficients below.</p>
 <p>Hint: You can either generate dummy variables to represent the race variable (code below) or re-level the Race variable so that the reference group is Hispanic: <code>dat$White &lt;- as.numeric(dat$Race==&quot;W</code>“)<code></code>dat<span class="math inline">\(Black &lt;- as.numeric(dat\)</span>Race==”B“)<code></code>dat<span class="math inline">\(Hispanic &lt;- as.numeric(dat\)</span>Race==”H“)<code></code>dat<span class="math inline">\(Other &lt;- as.numeric(dat\)</span>Race==”O&quot;)`</p>
-<div id="answer-8" class="section level5">
+<div id="answer-9" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>dat &lt;- read.csv(&quot;toy_ex3.csv&quot;, header = TRUE)
 dat$White &lt;- as.numeric(dat$Race == &quot;W&quot;)
@@ -1934,7 +1937,7 @@ summary(lm4)</code></pre>
 <div id="question-11-of-13" class="section level3">
 <h3>Question 11 of 13</h3>
 <p>Based on the regression you just ran: on average, Black babies are expected to weigh _______ grams less than Hispanic babies.</p>
-<div id="answer-9" class="section level5">
+<div id="answer-10" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>round(abs(summary(lm4)$coef[3]), digits = 2)</code></pre>
 <pre><code>## [1] 42.32</code></pre>
@@ -1943,7 +1946,7 @@ summary(lm4)</code></pre>
 <div id="question-12-of-13" class="section level3">
 <h3>Question 12 of 13</h3>
 <p>Based on the same regression result, at level 5%, there is a statistically significant difference in birth weight between Black and Hispanic babies.</p>
-<div id="answer-10" class="section level5">
+<div id="answer-11" class="section level5">
 <h5>Answer:</h5>
 <p><strong>FALSE</strong></p>
 </div>
@@ -1951,7 +1954,7 @@ summary(lm4)</code></pre>
 <div id="question-13-of-13" class="section level3">
 <h3>Question 13 of 13</h3>
 <p>On average, the birth weight of a White baby is ______ grams higher than that of a Black baby (round to one decimal place).</p>
-<div id="answer-11" class="section level5">
+<div id="answer-12" class="section level5">
 <h5>Answer:</h5>
 <pre class="r"><code>round(120.29 + 42.32, digits = 1)</code></pre>
 <pre><code>## [1] 162.6</code></pre>
