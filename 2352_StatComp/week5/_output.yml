@@ -1,0 +1,6 @@
+html_document:
+  theme: united
+  toc: TRUE
+  toc_float: TRUE
+  smooth_scroll: TRUE
+  code_folding: show
