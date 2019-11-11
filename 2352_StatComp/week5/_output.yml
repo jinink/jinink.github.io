@@ -2,7 +2,8 @@ html_document:
   theme: sandstone
   toc: true
   toc_depth: 2
-  toc_float: true
+  toc_float:
     collasped: false
-  smooth_scroll: TRUE
+    smooth_scroll: true
   code_folding: show
+  number_sections: true
