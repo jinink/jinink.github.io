@@ -1,6 +1,8 @@
 html_document:
-  theme: united
-  toc: TRUE
-  toc_float: TRUE
+  theme: sandstone
+  toc: true
+  toc_depth: 2
+  toc_float: true
+    collasped: false
   smooth_scroll: TRUE
   code_folding: show
