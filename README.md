@@ -2,7 +2,7 @@
 
 Hi! Welcome! 
 
-I'm Tong Jin. I am a graduate student at [New York University](https://www.nyu.edu).
+I'm Tong. I am a graduate student at [New York University](https://www.nyu.edu).
 
 My major is [Applied Statistics for Social Science Research](https://steinhardt.nyu.edu/programs/applied-statistics-social-science-research).
 
