@@ -143,7 +143,7 @@ aside h4 {
 	color: white;
 }
 footer {
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	text-align: Left;
 	font-size: .5em;
