@@ -27,7 +27,7 @@ Please leave comments or report issues [HERE](https://github.com/jinink/jinink.g
 ## Getting started
 
 To visit:
-[jinink.github.io](https://jinink.github.io)
+[Link to my website](https://tong-jin-nyu.github.io)
 
 ## Authors
 
