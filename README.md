@@ -28,6 +28,10 @@ I also post my learning notes, programming projects and interesting articles on 
 
 Please leave comments or report issues [HERE](https://github.com/jinink/jinink.github.io/issues/new).
 
+UX Design:
+
+* Figma
+
 ## Getting started
 
 To visit: [Link to my website](https://tong-jin-nyu.github.io)
